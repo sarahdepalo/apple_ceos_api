@@ -1,11 +1,12 @@
 import { BrowserRouter as Router } from 'react-router-dom'
 import CeoList from './components/CeoList';
+import Title from './components/Title'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Apple CEOs v5 - React!</h1>
+      <Title>Apple CEOs v5 - React!</Title>
       <Router>  
         <CeoList/>
       </Router>

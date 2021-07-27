@@ -2,6 +2,7 @@ import { Route, Link, useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 // import CeoDetails from './CeoDetails'
 import CeoDetailsAsync from './CeoDetailsAsync';
+import StyledList from './StyledList';
 
 const CeoList = () => {
     // ceos will be saved in state. setCeos is the function/method we will call to save data to state.
@@ -25,7 +26,7 @@ const CeoList = () => {
             {!!ceos.length ? (
                 <>
                     <Route exact path="/">
-                        <ul>
+                        <StyledList>
                             {ceos.map((ceo, index) => (
                                 <li key={index}>
                                     <Link to={`/ceo/${ceo.slug}`}>
@@ -33,7 +34,7 @@ const CeoList = () => {
                                     </Link>
                                 </li>
                             ))}
-                        </ul>
+                        </StyledList>
                     </Route>
                     <Route path="/ceo/:ceo_slug">
                         {/* <CeoDetails
